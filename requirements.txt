@@ -1,6 +1,6 @@
-streamlit
 pandas
 numpy
 investpy
+streamlit
 urlopen
 bs4
