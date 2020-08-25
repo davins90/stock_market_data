@@ -2,7 +2,6 @@ streamlit
 pandas
 numpy
 investpy
-base64
 BytesIO
 urlopen
 BeautifulSoup
