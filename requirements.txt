@@ -2,7 +2,6 @@ streamlit
 pandas
 numpy
 investpy
-time
 base64
 BytesIO
 urlopen
