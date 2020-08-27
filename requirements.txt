@@ -1,6 +1,6 @@
 pandas
 numpy
-investpy
+investpy == 1.0
 streamlit
 urlopen
 bs4
