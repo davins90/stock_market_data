@@ -63,8 +63,8 @@ def fun():
     # df_ge = investpy.get_index_recent_data(index='TR Eurozone 10 Years Government Benchmark',country='euro zone') # governativo eurozona
     df_gu = investpy.get_index_recent_data(index='TR US 10 Year Government Benchmark',country='united states') # governativo usa
     df_iu = investpy.get_index_recent_data(index='DJ Equal Weight US Issued Corporate Bond TR',country='united states') # ig corp usa 
-    df_or = investpy.get_index_recent_data(index='Bloomberg Gold TR',country='world') # oro 
-    df_wt = investpy.get_index_recent_data(index='Bloomberg WTI Crude Oil TR',country='world') # wti
+    df_or = investpy.get_index_recent_data(index='Bloomberg Gold TR') # oro 
+    df_wt = investpy.get_index_recent_data(index='Bloomberg WTI Crude Oil TR') # wti
 
     ## Creo dataframe finale
 
