@@ -4,4 +4,3 @@ investpy
 streamlit
 urlopen
 bs4
-xlswriter
