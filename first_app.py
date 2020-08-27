@@ -70,6 +70,7 @@ def fun():
 
     # index = [df_it,df_eu,df_us,df_jp,df_ci,df_mt,df_em,df_ge,df_gu,df_iu,df_or,df_wt,eur_gbp,eur_usd,eur_yen]
     # index = [eur_gbp,eur_usd,eur_yen]
+    index = [df_it,df_us,df_jp,df_ci,df_gu,df_iu]
 
     val_all = []
     for i in range(len(index)):
