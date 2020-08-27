@@ -8,6 +8,7 @@ import base64
 from io import BytesIO
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+from datetime import date, timedelta
 
 pd.set_option('display.max_rows',None)
 pd.set_option('display.max_columns',None)
@@ -51,6 +52,12 @@ def fun():
     eur_gbp = investpy.get_currency_cross_recent_data(currency_cross='EUR/GBP')
     eur_yen = investpy.get_currency_cross_recent_data(currency_cross='EUR/JPY')
 
+    today = date.today()
+    today = today.strftime("%d/%m/%Y")
+
+    last_day = date.today() - timedelta(days=20)
+    last_day = last_day.strftime("%d/%m/%Y")
+
     ## Indici di mercato 
 
     df_it = investpy.get_index_recent_data(index='MSCI Italy Net EUR',country='italy') # italia
@@ -65,12 +72,13 @@ def fun():
     df_iu = investpy.get_index_recent_data(index='DJ Equal Weight US Issued Corporate Bond TR',country='united states') # ig corp usa 
     # df_or = investpy.get_index_recent_data(index='Bloomberg Gold TR',country='world') # oro 
     # df_wt = investpy.get_index_recent_data(index='Bloomberg WTI Crude Oil TR',country='world') # wti
+    df_wt = investpy.get_index_historical_data(index='Bloomberg WTI Crude Oil TR',country='world',from_date=last_day,to_date=today,interval='Daily') # wti
 
     ## Creo dataframe finale
 
     # index = [df_it,df_eu,df_us,df_jp,df_ci,df_mt,df_em,df_ge,df_gu,df_iu,df_or,df_wt,eur_gbp,eur_usd,eur_yen]
     # index = [eur_gbp,eur_usd,eur_yen]
-    index = [df_it,df_us,df_jp,df_ci,df_gu,df_iu]
+    index = [df_it,df_us,df_jp,df_ci,df_gu,df_iu,df_wt,eur_gbp,eur_usd,eur_yen]
 
     val_all = []
     for i in range(len(index)):
@@ -102,9 +110,10 @@ def fun():
     val_all['tipo'][3] = 'azioni_cina_usd'
     val_all['tipo'][4] = 'bond_governativi_usa'
     val_all['tipo'][5] = 'bond_corporate_usa'
-    val_all['tipo'][6] = 'euro_sterlina'
-    val_all['tipo'][7] = 'euro_dollaro'
-    val_all['tipo'][8] = 'euro_yen'
+    val_all['tipo'][6] = 'wti'
+    val_all['tipo'][7] = 'euro_sterlina'
+    val_all['tipo'][8] = 'euro_dollaro'
+    val_all['tipo'][9] = 'euro_yen'
 
     # val_all['tipo'][0] = 'euro_sterlina'
     # val_all['tipo'][1] = 'euro_dollaro'
