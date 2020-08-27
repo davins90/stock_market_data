@@ -28,7 +28,7 @@ def get_table_download_link(df):
 
 
 st.title('Come sono andati i mercati questa settimana?')
-st.write('Overview super generica sui mercati e link per il download del csv in fondo alla pagina.')
+st.write('Overview super generica sui mercati e link per il download del file excel in fondo alla pagina.')
 
 def fun():
     st.write('Ecco i dati! :)')
