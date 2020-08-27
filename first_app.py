@@ -30,7 +30,7 @@ st.title('Come sono andati i mercati questa settimana?')
 st.write('Overview super generica sui mercati e link per il download del csv in fondo alla pagina.')
 
 def fun():
-    st.write('clicca qua per avviare aggiornamento')
+    st.write('Sto scaricando i dati...')
     ## Dati dello Spread da Borsa Italiana
     url = 'https://borsaitaliana.teleborsa.it/pages/spread/item.aspx'
     try:
@@ -108,5 +108,5 @@ def fun():
     st.markdown(get_table_download_link(df), unsafe_allow_html=True)
     return
 
-if st.button('clicca qua'):
+if st.button('clicca qua per avviare aggiornamento dei dati di mercato'):
     fun()
