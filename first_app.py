@@ -52,11 +52,11 @@ def fun():
     eur_gbp = investpy.get_currency_cross_recent_data(currency_cross='EUR/GBP')
     eur_yen = investpy.get_currency_cross_recent_data(currency_cross='EUR/JPY')
 
-    today = date.today()
-    today = today.strftime("%d/%m/%Y")
+    # today = date.today()
+    # today = today.strftime("%d/%m/%Y")
 
-    last_day = date.today() - timedelta(days=20)
-    last_day = last_day.strftime("%d/%m/%Y")
+    # last_day = date.today() - timedelta(days=20)
+    # last_day = last_day.strftime("%d/%m/%Y")
 
     ## Indici di mercato 
 
@@ -71,8 +71,8 @@ def fun():
     df_gu = investpy.get_index_recent_data(index='TR US 10 Year Government Benchmark',country='united states') # governativo usa
     df_iu = investpy.get_index_recent_data(index='DJ Equal Weight US Issued Corporate Bond TR',country='united states') # ig corp usa 
     # df_or = investpy.get_index_recent_data(index='Bloomberg Gold TR',country='world') # oro 
-    # df_wt = investpy.get_index_recent_data(index='Bloomberg WTI Crude Oil TR',country='world') # wti
-    df_wt = investpy.get_index_historical_data(index='Bloomberg WTI Crude Oil TR',country='world',from_date=last_day,to_date=today,interval='Daily') # wti
+    df_wt = investpy.get_index_recent_data(index='Bloomberg WTI Crude Oil TR',country='world') # wti
+    # df_wt = investpy.get_index_historical_data(index='Bloomberg WTI Crude Oil TR',country='world',from_date=last_day,to_date=today,interval='Daily') # wti
 
     ## Creo dataframe finale
 
