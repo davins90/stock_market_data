@@ -4,4 +4,5 @@ git+https://github.com/davins90/investpy.git
 streamlit
 urlopen
 bs4
-openpyxl 
+openpyxl
+xlsxwriter
