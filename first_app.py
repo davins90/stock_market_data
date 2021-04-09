@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import investpy
+import investpy # versione aggiornata: per ora solo fork sull'originale, poi sistema meglio
 import time
 import base64
 
