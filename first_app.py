@@ -28,6 +28,7 @@ def get_table_download_link(df):
 
 st.title("Come sono andati i mercati questa settimana e nell' ultimo mese?")
 st.write('Una volta lanciato questo programma viene in automatico generato un excel con i dati aggiornati dei mercati.')
+st.warning("Not working for pkg, investpy.com and Cloudfare problems.")
 
 ## Dati valutarii
 
